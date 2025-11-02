@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <h3>Admin Portal</h3>
+
+  <form (ngSubmit)="saveAbout()">
+    <div class="mb-3">
+      <label>Name</label>
+      <input [(ngModel)]="about.name" name="name" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Role</label>
+      <input [(ngModel)]="about.role" name="role" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Description</label><div class="container mt-4">
+  <h3 class="mb-4">Admin Panel - Manage Projects</h3>
+
+  <!-- Form to Add/Edit Project -->
+  <form (ngSubmit)="saveProject()" class="card p-3 mb-4 shadow-sm">
+    <div class="mb-3">
+      <label>Title</label>
+      <input [(ngModel)]="project.title" name="title" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Description</label>
+      <textarea [(ngModel)]="project.description" name="description" class="form-control" rows="2"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label>Tech Stack</label>
+      <input [(ngModel)]="project.tech" name="tech" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success me-2" *ngIf="!editMode">Add Project</button>
+    <button type="submit" class="btn btn-primary me-2" *ngIf="editMode">Update Project</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelEdit()" *ngIf="editMode">Cancel</button>
+  </form>
+
+  <!-- Table of Projects -->
+  <table class="table table-striped table-bordered shadow-sm">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Tech</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of projects">
+        <td>{{ p.id }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.description }}</td>
+        <td>{{ p.tech }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning me-2" (click)="editProject(p)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteProject(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <textarea [(ngModel)]="about.description" name="description" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save About Info</button>
+  </form>
+
+  <button class="btn btn-danger mb-3" (click)="logout()">Logout</button>
+</div>

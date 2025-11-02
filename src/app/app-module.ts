@@ -3,18 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { FormsModule } from '@angular/forms';
+import { Login } from './login/login';
+import { provideHttpClient } from '@angular/common/http';
+import { Highlight } from './directives/highlight';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Login,
+    Highlight
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
+    provideZonelessChangeDetection(),
+    provideHttpClient(),
+    provideHttpClientTesting()
   ],
   bootstrap: [App]
 })

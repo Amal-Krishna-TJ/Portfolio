@@ -1,0 +1,39 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin123"
+  },
+  "about": {
+    "name": "Amal Krishna",
+    "role": "Full Stack Developer",
+    "description": "Building interactive Angular applications."
+  },
+  "contact": {
+    "email": "amal@example.com",
+    "phone": "+91 9876543210",
+    "address": "Kerala, India"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "tech": "Angular, Material",
+      "description": "A personal portfolio built with Angular and Bootstrap.",
+      "image": "home/portfolio.jpg"
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce App",
+      "tech": "Angular, Node.js",
+      "description": "Mini e-commerce app built with Angular and Node.",
+      "image": "home/e-commerce.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Blog Platform",
+      "tech": "Angular, Firebase",
+      "description": "Blogging platform using Angular and Firebase.",
+      "image": "home/blog_platform.jpg"
+    }
+  ]
+}

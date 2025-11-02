@@ -1,0 +1,23 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">Contact</h5>
+    <form (ngSubmit)="send()" #contactForm="ngForm">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="model.name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="4" name="message" [(ngModel)]="model.message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Send</button>
+    </form>
+  </div>
+</div>
