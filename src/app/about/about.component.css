@@ -1,0 +1,54 @@
+.about-container {
+  margin: 40px;
+  padding: 30px;
+  background-color: #f0f9ff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #515151;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.skills-section {
+  margin-top: 40px;
+}
+
+.skills-section h2,
+.goals-section h2 {
+  color: #303030;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-section li {
+  background-color: #ecf0f1;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #515151;
+}
+
+.goals-section {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #515151;
+  line-height: 1.6;
+}
